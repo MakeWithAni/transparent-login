@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <span> </span>
+        <form id="signinform">
+            <h2>Login</h2>
+            <div class="inputbox">
+                <input type="text" placeholder="username">
+            </div>
+            <div class="inputbox">
+                <input type="password" placeholder="password">
+            </div>
+            <div class="inputbox group">
+                <a href="#">Forget Password</a>
+                <a href="#" id="signup">Sign up</a>
+            </div>
+            <div class="inputbox">
+                <input type="submit" value="Sign in">
+            </div>
+        </form>
+
+        <form id="signupform">
+            <h2>Registration</h2>
+            <div class="inputbox">
+                <input type="text" placeholder="username">
+            </div>
+            <div class="inputbox">
+                <input type="password" placeholder="Create password">
+            </div> 
+            <div class="inputbox">
+                <input type="email" placeholder="Email Address">
+            </div> 
+            <div class="inputbox">
+                <input type="password" placeholder="Confirm password">
+            </div>
+           
+            <div class="inputbox">
+                <input type="submit" value="Register Account">
+            </div>
+
+            <div class="inputbox group">
+                <a href="#">Aleady have account? <b id="signin">Login</b></a>
+            </div>
+        </form>
+    </div>
+    <script>
+        let signup= document.querySelector('#signup');
+         let signin= document.querySelector('#signin');
+        let body = document.querySelector('body');
+        signup.onclick= function () {
+            body.classList.add('signup');}
+            signin.onclick= function () {
+            body.classList.remove('signup');
+        }
+    </script>
+</body>
+</html>
